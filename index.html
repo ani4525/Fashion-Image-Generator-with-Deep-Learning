@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Studio — AI Fashion Generator</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Helvetica+Neue:wght@100;300;400&family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">AI STUDIO</span>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">AI STUDIO</a>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+      <li><a href="#collection" class="nav-link" data-text="Collection">Collection</a></li>
+      <li><a href="#generate" class="nav-link" data-text="Generate">Generate</a></li>
+      <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-menu-link">About</a></li>
+      <li><a href="#collection" class="mobile-menu-link">Collection</a></li>
+      <li><a href="#generate" class="mobile-menu-link">Generate</a></li>
+      <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ─────────── HERO ─────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal-fade">SS 2025 COLLECTION</p>
+      <h1 class="hero-headline">
+        <span class="line reveal-line">AI&nbsp;GENERATED</span>
+        <span class="line reveal-line italic">Fashion</span>
+      </h1>
+      <p class="hero-sub reveal-fade">Designing the future using Generative AI</p>
+      <a href="#generate" class="hero-cta reveal-fade">
+        <span>Generate Now</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-image-frame reveal-scale">
+      <div class="hero-image-inner">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Fashion" loading="eager" />
+        <div class="hero-image-overlay">
+          <span>AI DESIGNED</span>
+        </div>
+      </div>
+      <div class="hero-image-label">
+        <span class="label-num">001</span>
+        <span class="label-text">Diffusion Model Output</span>
+      </div>
+    </div>
+
+    <div class="hero-marquee">
+      <div class="marquee-track">
+        <span>AI FASHION GENERATOR</span>
+        <span>—</span>
+        <span>STABLE DIFFUSION</span>
+        <span>—</span>
+        <span>LORA FINE-TUNING</span>
+        <span>—</span>
+        <span>GENERATIVE AI</span>
+        <span>—</span>
+        <span>AI FASHION GENERATOR</span>
+        <span>—</span>
+        <span>STABLE DIFFUSION</span>
+        <span>—</span>
+        <span>LORA FINE-TUNING</span>
+        <span>—</span>
+        <span>GENERATIVE AI</span>
+        <span>—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── ABOUT ─────────── -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-image-col">
+        <div class="about-image-wrap reveal-slide-right">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80" alt="Fashion Campaign" />
+          <div class="about-image-caption">
+            <span>02</span>
+            <span>Campaign 2025</span>
+          </div>
+        </div>
+        <div class="about-accent-text">MODEL<br/>DRIVEN</div>
+      </div>
+
+      <div class="about-text-col reveal-fade">
+        <p class="section-label">/ About the Project</p>
+        <h2 class="about-title">Generative<br/><em>Creativity</em></h2>
+        <p class="about-body">
+          AI Fashion Studio explores how generative AI can create innovative clothing concepts.
+          Using diffusion models and machine learning, this system generates unique fashion designs
+          based on text prompts.
+        </p>
+        <p class="about-body">
+          Fine-tuned on curated fashion datasets using LoRA techniques, the model understands
+          silhouette, texture, drape, and aesthetic — producing designs that feel deliberately crafted.
+        </p>
+        <ul class="about-stats">
+          <li>
+            <span class="stat-num">10K+</span>
+            <span class="stat-label">Training Images</span>
+          </li>
+          <li>
+            <span class="stat-num">SD 1.5</span>
+            <span class="stat-label">Base Model</span>
+          </li>
+          <li>
+            <span class="stat-num">LoRA</span>
+            <span class="stat-label">Fine-Tuning</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── COLLECTION ─────────── -->
+  <section class="collection" id="collection">
+    <div class="collection-header reveal-fade">
+      <p class="section-label">/ The Collection</p>
+      <h2 class="collection-title">AI LOOKBOOK<br/><em>Vol. I</em></h2>
+    </div>
+
+    <div class="collection-grid">
+      <div class="grid-item large reveal-item" data-delay="0">
+        <div class="grid-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Fashion 1" />
+          <div class="grid-overlay">
+            <span class="grid-num">001</span>
+            <span class="grid-name">Void Silhouette</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item reveal-item" data-delay="100">
+        <div class="grid-img-wrap">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&q=80" alt="Fashion 2" />
+          <div class="grid-overlay">
+            <span class="grid-num">002</span>
+            <span class="grid-name">Monochrome Study</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item reveal-item" data-delay="200">
+        <div class="grid-img-wrap">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&q=80" alt="Fashion 3" />
+          <div class="grid-overlay">
+            <span class="grid-num">003</span>
+            <span class="grid-name">Neural Drape</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item reveal-item" data-delay="150">
+        <div class="grid-img-wrap">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=80" alt="Fashion 4" />
+          <div class="grid-overlay">
+            <span class="grid-num">004</span>
+            <span class="grid-name">Latent Form</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-item large reveal-item" data-delay="50">
+        <div class="grid-img-wrap">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80" alt="Fashion 5" />
+          <div class="grid-overlay">
+            <span class="grid-num">005</span>
+            <span class="grid-name">Diffuse Edge</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── GENERATE ─────────── -->
+  <section class="generate" id="generate">
+    <div class="generate-inner">
+      <div class="generate-header reveal-fade">
+        <p class="section-label">/ Core Feature</p>
+        <h2 class="generate-title">GENERATE<br/><em>Your Design</em></h2>
+        <p class="generate-sub">Enter a text prompt. The model will synthesise a unique fashion design using domain-specific diffusion.</p>
+      </div>
+
+      <div class="generate-interface reveal-fade">
+        <div class="prompt-area">
+          <label class="prompt-label" for="promptInput">DESCRIBE YOUR VISION</label>
+          <div class="prompt-input-wrap">
+            <textarea
+              id="promptInput"
+              class="prompt-input"
+              placeholder="e.g. A flowing asymmetric gown in black silk with geometric cut-outs, minimalist Japanese aesthetic, editorial fashion photography..."
+              rows="3"
+            ></textarea>
+            <div class="prompt-count"><span id="charCount">0</span> / 300</div>
+          </div>
+
+          <div class="prompt-suggestions">
+            <span class="suggestion-label">TRY:</span>
+            <button class="suggestion-chip" data-prompt="Oversized monochromatic coat with deconstructed seams, avant-garde silhouette">Avant-garde coat</button>
+            <button class="suggestion-chip" data-prompt="Minimal white linen dress with architectural pleats, editorial fashion">Minimal linen dress</button>
+            <button class="suggestion-chip" data-prompt="Dark tailored suit with asymmetric lapels and raw hem details">Dark tailored suit</button>
+          </div>
+
+          <button class="generate-btn" id="generateBtn">
+            <span class="btn-text">Generate Design</span>
+            <span class="btn-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="generate-output" id="generateOutput">
+          <div class="output-placeholder" id="outputPlaceholder">
+            <div class="placeholder-grid">
+              <div></div><div></div><div></div><div></div>
+            </div>
+            <p>Your generated design will appear here</p>
+          </div>
+
+          <div class="output-loading" id="outputLoading" style="display:none;">
+            <div class="loading-anim">
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+              <div class="loading-bar"></div>
+            </div>
+            <p class="loading-text">Synthesising design...</p>
+          </div>
+
+          <div class="output-result" id="outputResult" style="display:none;">
+            <img id="generatedImage" src="" alt="Generated Fashion Design" />
+            <div class="output-meta">
+              <span class="output-label">AI GENERATED</span>
+              <button class="output-save" id="saveBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Save
+              </button>
+            </div>
+            <p class="output-prompt-echo" id="outputPromptEcho"></p>
+          </div>
+
+          <div class="output-error" id="outputError" style="display:none;">
+            <p id="errorMessage">Something went wrong. Please try again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── LOOKBOOK / HORIZONTAL SCROLL ─────────── -->
+  <section class="lookbook" id="lookbook">
+    <div class="lookbook-header reveal-fade">
+      <p class="section-label">/ Showcase</p>
+      <h2 class="lookbook-title">EXPLORE AI<br/>FASHION COLLECTION</h2>
+    </div>
+
+    <div class="lookbook-scroll-container" id="lookbookScroll">
+      <div class="lookbook-track" id="lookbookTrack">
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80" alt="Look 1" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">01</span>
+            <span class="look-title">Noir Cascade</span>
+          </div>
+        </div>
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1550614000-4895a10e1bfd?w=400&q=80" alt="Look 2" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">02</span>
+            <span class="look-title">Ghost Layer</span>
+          </div>
+        </div>
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=400&q=80" alt="Look 3" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">03</span>
+            <span class="look-title">White Noise</span>
+          </div>
+        </div>
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?w=400&q=80" alt="Look 4" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">04</span>
+            <span class="look-title">Static Form</span>
+          </div>
+        </div>
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=400&q=80" alt="Look 5" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">05</span>
+            <span class="look-title">Edge Ritual</span>
+          </div>
+        </div>
+
+        <div class="lookbook-item">
+          <div class="lookbook-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="Look 6" />
+          </div>
+          <div class="lookbook-info">
+            <span class="look-num">06</span>
+            <span class="look-title">Phantom Cut</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="lookbook-progress">
+      <div class="lookbook-progress-bar" id="lookbookProgressBar"></div>
+    </div>
+
+    <div class="lookbook-nav">
+      <button class="lookbook-btn" id="lookbookPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="lookbook-btn" id="lookbookNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 class="footer-logo">AI STUDIO</h3>
+        <p class="footer-tagline">Domain-specific image generation<br/>using fine-tuned diffusion models</p>
+      </div>
+      <div class="footer-tech">
+        <p class="footer-section-title">TECHNOLOGY</p>
+        <ul>
+          <li>Stable Diffusion</li>
+          <li>LoRA Fine-Tuning</li>
+          <li>Flask</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <p class="footer-section-title">LINKS</p>
+        <ul>
+          <li><a href="#" class="footer-link">GitHub</a></li>
+          <li><a href="#" class="footer-link">Documentation</a></li>
+          <li><a href="#" class="footer-link">Research Paper</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 AI Fashion Generator — Chandigarh University</p>
+      <p class="footer-credit">Built with Stable Diffusion + LoRA</p>
+    </div>
+
+    <div class="footer-bg-text" aria-hidden="true">AI</div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

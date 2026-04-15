@@ -1,0 +1,35 @@
+# ════════════════════════════════════════════════════════════
+# AI Fashion Generator — Python Dependencies
+# ════════════════════════════════════════════════════════════
+#
+# Tested stack:
+#   Python  : 3.10.x          (NOT 3.11 / 3.12 / 3.13)
+#   GPU     : NVIDIA GTX 1650 (4 GB VRAM, sm_75 / Turing)
+#   Driver  : 595+
+#   CUDA    : 12.1 (via PyTorch index)
+#
+# Install command:
+#   pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu121
+#
+# ─── PyTorch (CUDA 12.1 build) ──────────────────────────────
+torch==2.3.1+cu121
+torchvision==0.18.1+cu121
+torchaudio==2.3.1+cu121
+
+# ─── Diffusion pipeline ──────────────────────────────────────
+diffusers==0.29.2
+transformers==4.41.2
+accelerate==0.30.1
+safetensors==0.4.3
+
+# ─── Image processing ────────────────────────────────────────
+Pillow==10.3.0
+invisible-watermark==0.2.0    # required by SDXL pipeline
+scipy==1.13.1                 # required by diffusers schedulers
+omegaconf==2.3.0              # required internally by diffusers
+
+# ─── Flask web server ────────────────────────────────────────
+flask==3.0.3
+
+# ─── Optional: faster attention (install separately if needed)
+# xformers==0.0.26.post1      # uncomment ONLY if using Python 3.10 + torch 2.3.1
